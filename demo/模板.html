@@ -1,0 +1,45 @@
+<!--html5 骨架-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title>基本模版</title>
+    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+    <style>
+        .left {
+            height: 1000px;
+            width: 50%;
+            background: red;
+            float: left;
+        }
+        .right {
+            height: 1000px;
+            width: 50%;
+            background: black;
+            border-left: 3px solid #ccc;
+            float: right;
+        }
+        
+        @media screen and (max-width:992px) {
+            .left,.right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

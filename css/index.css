@@ -1,0 +1,640 @@
+/*=======================reset重置 css==================*/
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.teal {
+    color: teal;
+    font-weight: bold;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #E0E0E0;
+}
+
+input, textarea {
+    border: none;
+    online: none;
+    resize: none;
+    -webkit-appearance: none; /*清除控件默认样式*/
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix::after, .clearfix::before {
+    content: '';
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*声明字体*/
+
+/*定义字体类*/
+
+/*模块 css*/
+
+/*响应式的container设计*/
+.contaner {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, .2);
+
+}
+
+@media screen and (min-width: 768px) {
+    .contaner {
+        width: 750px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contaner {
+        width: 970px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contaner {
+        width: 1030px;
+    }
+}
+
+/*===============================侧边栏*/
+aside {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -100px;
+    width: 86px;
+}
+
+ul {
+    height: 100%;
+    width: 100%;
+}
+
+aside ul li {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 86px;
+    height: 43px;
+    padding-left: 10px;
+    line-height: 43px;
+    font-size: 16px;
+    margin-top: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: all 0.8s;
+    z-index: 100;
+}
+
+aside ul li a {
+    color: #fff;
+
+}
+
+aside ul li:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*@media screen and (max-width: 768px) {*/
+/*aside {*/
+/*display: none;*/
+/*}*/
+/*}*/
+
+/*================================顶部简介*/
+
+header {
+    background: #333;
+    padding: 30px 45px;
+}
+
+header .header-qrcode {
+    float: left;
+}
+
+header .header-qrcode img {
+    width: 130px;
+    height: 130px;
+}
+
+header address {
+    float: left;
+}
+
+header .contact {
+    float: left;
+    padding: 0 17px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header .contact li {
+    font-size: 18px;
+    word-break: break-all;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header .contact li a {
+    color: #fff;
+    font-style: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    /*display: inline-block;*/
+    /*word-wrap: break-word;*/
+}
+
+header .contact li a:hover {
+    color: #a3d3d1;
+}
+
+header .contact li i {
+    font-size: 22px;
+    width: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+header .contact li .icon-comments-alt {
+    margin-right: 8px;
+}
+
+header .title {
+    float: right;
+    color: #ffffff;
+}
+
+header .title h1 {
+    font-size: 72px;
+    text-align: center;
+}
+
+header .title h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+/*二维码在小屏是消失*/
+@media screen and (max-width: 992px) {
+    .header-qrcode {
+        display: none;
+    }
+}
+
+/*右侧栏在超小屏幕时，移动到最上面*/
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        padding: 30px 10px;
+        box-sizing: border-box;
+        /*margin-top: 50px;*/
+    }
+
+    header .title {
+        width: 100%;
+    }
+
+    address {
+        padding-top: 30px;
+        word-wrap: break-word;
+    }
+
+    /*侧边栏*/
+    aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    ul {
+        height: 100%;
+        width: 100%;
+    }
+
+    aside ul li {
+        float: left;
+        background: #333333;
+        color: #fff;
+        width: 25%;
+        height: 43px;
+        padding-left: 0px;
+        text-align: center;
+        line-height: 43px;
+        font-size: 16px;
+        margin-top: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    aside ul li {
+        transition: all 0.8s;
+    }
+
+    aside ul li:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .timeline-wrapper div.myProject div.fr {
+        margin-top: 1px;
+    }
+}
+
+/*article部分*/
+
+article.content {
+    padding: 30px 45px 30px 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.content_left {
+    width: 48%;
+    float: left;
+    /*padding-right: 15px;*/
+}
+
+.content_right {
+    width: 48%;
+    float: right;
+    /*height: 1235px;*/
+    /*padding-left: 15px;*/
+}
+
+/*教育经历*/
+.eduction {
+    border-left: 4px solid #333;
+    position: relative;
+}
+
+.eduction::before {
+    position: absolute;
+    bottom: -14px;
+    left: -9px;
+    display: block;
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: #333;
+}
+
+.eduction .sec-title-wrapper h4 {
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    padding-left: 35px;
+}
+
+.eduction .sec-title-wrapper h4 b {
+    position: absolute;
+    left: -22px;
+    width: 44px;
+    height: 42px;
+    background: teal;
+    color: white;
+    text-align: center;
+    line-height: 42px;
+    padding-bottom: 2px;
+    border-radius: 22px;
+
+}
+
+.eduction .sec-title-wrapper span {
+    font-variant: small-caps;
+    color: teal;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 35px;
+}
+
+.timeline-wrapper p.timeline {
+    margin-top: 15px;
+    width: 85%;
+    background: #333;
+    line-height: 1.33;
+    border-radius: 6px;
+    padding: 3px 10px 3px 26px;
+    position: relative;
+    margin-left: 0px;
+
+}
+
+.timeline-wrapper s {
+    background: #333;
+    position: absolute;
+    left: -22px;
+    top: -5px;
+    padding-top: 4px;
+    width: 38px;
+    height: 34px;
+    color: white;
+    text-align: center;
+    line-height: 34px;
+    border-radius: 19px;
+    font-size: 28px;
+}
+
+.timeline-wrapper p.timeline span {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.33;
+
+}
+
+.timeline-wrapper .school h3 {
+    font-size: 32px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.timeline-wrapper .school h4 {
+    font-size: 16px;
+    font-weight: normal;
+    padding-left: 20px;
+    position: relative;
+    margin-left: 20px;
+}
+
+/*三级小图标===============*/
+sub {
+    width: 28px;
+    height: 22px;
+    font-size: 16px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+}
+
+.timeline-wrapper p {
+    font-size: 16px;
+    padding-left: 20px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.timeline-wrapper p sub {
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+/*语言部分*/
+
+.language {
+    margin-top: 30px;
+}
+
+section .sec-title-wrapper h4 {
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    padding-left: 35px;
+}
+
+/*可复用的title部分*/
+section .sec-title-wrapper b {
+    position: absolute;
+    left: -22px;
+    width: 44px;
+    height: 42px;
+    background: teal;
+    color: white;
+    text-align: center;
+    line-height: 42px;
+    padding-bottom: 2px;
+    border-radius: 22px;
+}
+
+section .sec-title-wrapper span {
+    font-variant: small-caps;
+    color: teal;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 35px;
+}
+
+.language .list {
+    margin-top: 10px;
+}
+
+.language-cert-wrapper {
+    font-size: 20px;
+    margin-bottom: 5px;
+    line-height: initial;
+}
+
+.language-cert-type {
+    float: left;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.language-cert-wrapper .progress {
+    /*float: right;*/
+    width: 80%;
+    overflow: hidden;
+}
+
+.progress {
+    border-radius: 4px;
+    background-color: #333;
+}
+
+.progress-bar {
+    background-color: teal;
+    text-align: right;
+    padding-right: 10px;
+    color: #ffffff;
+}
+
+.language-description {
+    margin-top: 15px;
+}
+
+.language-desc-item {
+    line-height: 1.4;
+    padding-left: 28px;
+    font-size: 16px;
+    position: relative;
+}
+
+/*项目经历部分*/
+.projects {
+    margin-top: 15px;
+    border-left: 5px solid #333;
+    position: relative;
+}
+
+.projects::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    bottom: -13px;
+    left: -9px;
+    border-radius: 7px;
+    background: #333;
+}
+
+.timeline-wrapper .work h3 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.projects .work {
+    margin: 10px 0;
+}
+
+/*个人项目*/
+
+.projects .myProject {
+    margin: 10px 0;
+}
+
+.timeline-wrapper div.myProject s {
+    font-size: 20px;
+    padding-top: 2px;
+    height: 36px;
+}
+
+.timeline-wrapper div.myProject {
+    margin-top: 15px;
+    width: 90%;
+    background: #333;
+    line-height: 1.33;
+    border-radius: 6px;
+    padding: 3px 10px 3px 26px;
+    position: relative;
+    margin-left: 0px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.timeline-wrapper div.myProject div.fr {
+    background: #fff;
+    border-radius: 6px;
+    padding: 1px 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    color: #333;
+    transition: all 0.5s;
+}
+
+.timeline-wrapper div.myProject div.fr:hover {
+    background: #a3d3d1;
+
+}
+
+.timeline-wrapper div.myProject b {
+    margin-right: 5px;
+}
+
+/*技能-右栏部分======*/
+.content_right {
+    /*padding-left: 15px;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: 5px solid #333;
+    position: relative;
+}
+
+.skills {
+    /*border-left: 5px solid #333;*/
+    /*position: relative;*/
+}
+
+.skills::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    bottom: -13px;
+    left: -9px;
+    background: #333;
+    border-radius: 7px;
+}
+
+.content_right .timeline-wrapper p.timeline {
+    width: 91%;
+}
+
+.skillPart {
+    margin-top: 10px;
+}
+
+.skillPart h3 {
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.skillPart p {
+    padding-left: 30px;
+}
+
+footer {
+    text-align: center;
+    margin: 30px 6px;
+}
+
+@media screen and (max-width: 992px) {
+    .content_left, .content_right {
+        width: 100%;
+    }
+
+    .content_right {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content_left, .content_right {
+        width: 100%;
+    }
+
+    .content_right {
+        margin-top: 30px;
+    }
+
+    .contaner {
+        width: 100%;
+    }
+
+}
